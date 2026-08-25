@@ -1,0 +1,112 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios26.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Limooonik
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import AppIntents
+import Foundation
+import Swift
+import SwiftUI
+import WidgetKit
+import _AppIntents_SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct EndelConfig {
+  public var bgColor: SwiftUICore.Color
+  public var strokeWidth: CoreFoundation.CGFloat
+  public var strokeColor: SwiftUICore.Color
+  public init()
+}
+public struct EndelConfigTwo {
+  public var bgColor: SwiftUICore.Color
+  public var colorHead: SwiftUICore.Color
+  public var colorBall: SwiftUICore.Color
+  public var scaleBall: CoreFoundation.CGFloat
+  public init()
+}
+public struct EndelState {
+}
+public struct EndelGenerator {
+  public static func getFrames(config: Limooonik.EndelConfig) -> [Limooonik.EndelEntry]
+}
+@_Concurrency.MainActor @preconcurrency public struct EndelView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var e: Limooonik.Provider.Entry
+  @_Concurrency.MainActor @preconcurrency public init(e: Limooonik.Provider.Entry)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9Limooonik9EndelViewV4bodyQrvp", 0) __
+}
+public struct EndelEntry : WidgetKit.TimelineEntry {
+  public let date: Foundation.Date
+  public let a: Limooonik.EndelState
+  public let config: Limooonik.EndelConfig
+  public init(date: Foundation.Date, state: Limooonik.EndelState, config: Limooonik.EndelConfig)
+}
+public struct ReloadEndelIntent : AppIntents.AppIntent {
+  public static var title: Foundation.LocalizedStringResource {
+    get
+  }
+  public static var openAppWhenRun: Swift.Bool {
+    get
+  }
+  public init()
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func perform() async throws -> some AppIntents.IntentResult
+  
+  #endif
+  public typealias PerformResult = @_opaqueReturnTypeOf("$s9Limooonik17ReloadEndelIntentV7performQryYaKF", 0) __
+  public typealias SummaryContent = @_opaqueReturnTypeOf("$s10AppIntents0A6IntentPAAE16parameterSummaryQrvpZ", 0) __<Limooonik.ReloadEndelIntent>
+}
+public struct Provider : WidgetKit.TimelineProvider {
+  public let config: Limooonik.EndelConfig
+  public init(config: Limooonik.EndelConfig)
+  public func placeholder(in context: Limooonik.Provider.Context) -> Limooonik.EndelEntry
+  public func getSnapshot(in context: Limooonik.Provider.Context, completion: @escaping (Limooonik.EndelEntry) -> Swift.Void)
+  public func getTimeline(in context: Limooonik.Provider.Context, completion: @escaping (WidgetKit.Timeline<Limooonik.EndelEntry>) -> Swift.Void)
+  public typealias Entry = Limooonik.EndelEntry
+}
+public struct EndelStateTwo {
+}
+public struct EndelGeneratorTwo {
+  public static func getFramesTwo(config: Limooonik.EndelConfigTwo) -> [Limooonik.EndelEntryTwo]
+}
+@_Concurrency.MainActor @preconcurrency public struct EndelViewTwo : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var e: Limooonik.ProviderTwo.Entry
+  @_Concurrency.MainActor @preconcurrency public init(e: Limooonik.ProviderTwo.Entry)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9Limooonik12EndelViewTwoV4bodyQrvp", 0) __
+}
+public struct EndelEntryTwo : WidgetKit.TimelineEntry {
+  public let date: Foundation.Date
+  public let a: Limooonik.EndelStateTwo
+  public let config: Limooonik.EndelConfigTwo
+  public init(date: Foundation.Date, state: Limooonik.EndelStateTwo, config: Limooonik.EndelConfigTwo)
+}
+public struct ReloadEndelIntentTwo : AppIntents.AppIntent {
+  public static var title: Foundation.LocalizedStringResource {
+    get
+  }
+  public static var openAppWhenRun: Swift.Bool {
+    get
+  }
+  public init()
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func perform() async throws -> some AppIntents.IntentResult
+  
+  #endif
+  public typealias PerformResult = @_opaqueReturnTypeOf("$s9Limooonik20ReloadEndelIntentTwoV7performQryYaKF", 0) __
+  public typealias SummaryContent = @_opaqueReturnTypeOf("$s10AppIntents0A6IntentPAAE16parameterSummaryQrvpZ", 0) __<Limooonik.ReloadEndelIntentTwo>
+}
+public struct ProviderTwo : WidgetKit.TimelineProvider {
+  public let config: Limooonik.EndelConfigTwo
+  public init(config: Limooonik.EndelConfigTwo)
+  public func placeholder(in context: Limooonik.ProviderTwo.Context) -> Limooonik.EndelEntryTwo
+  public func getSnapshot(in context: Limooonik.ProviderTwo.Context, completion: @escaping (Limooonik.EndelEntryTwo) -> Swift.Void)
+  public func getTimeline(in context: Limooonik.ProviderTwo.Context, completion: @escaping (WidgetKit.Timeline<Limooonik.EndelEntryTwo>) -> Swift.Void)
+  public typealias Entry = Limooonik.EndelEntryTwo
+}
+extension Limooonik.EndelView : Swift.Sendable {}
+extension Limooonik.EndelViewTwo : Swift.Sendable {}
