@@ -1,6 +1,6 @@
 # Endel. Animated home screen widget.
 
-
+https://github.com/user-attachments/assets/39226f78-870b-47bc-b5e4-40e240e23b14
 
 Add the widget to your home screen. 
 
