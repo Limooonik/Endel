@@ -1,4 +1,4 @@
-# Finch. Animated home screen widget.
+# Endel. Animated home screen widget.
 
 
 
