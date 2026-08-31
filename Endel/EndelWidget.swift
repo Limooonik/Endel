@@ -11,11 +11,11 @@ struct EndelWidget: Widget {
         StaticConfiguration(kind: kind, provider: Limooonik.Provider(config: config)) { e in
             Button(intent: ReloadEndelIntent()) {
                 Limooonik.EndelView(e: e)
-                  .containerBackground(for: .widget) {
-                Color.black 
-            }
             }
             .buttonStyle(.plain)
+            .containerBackground(for: .widget) {
+                Color.black 
+            }
         }
         .configurationDisplayName("Endel Animation 1")
         .description("First animated widget")
