@@ -11,6 +11,9 @@ struct EndelWidget: Widget {
         StaticConfiguration(kind: kind, provider: Limooonik.Provider(config: config)) { e in
             Button(intent: ReloadEndelIntent()) {
                 Limooonik.EndelView(e: e)
+                  .containerBackground(for: .widget) {
+                Color.black 
+            }
             }
             .buttonStyle(.plain)
         }
@@ -28,6 +31,9 @@ struct EndelWidgetTwo: Widget {
         StaticConfiguration(kind: kind, provider: Limooonik.ProviderTwo(config: config)) { e in
             Button(intent: ReloadEndelIntentTwo()) {
                 Limooonik.EndelViewTwo(e: e)
+                .containerBackground(for: .widget) {
+                Color.black 
+            }
             }
             .buttonStyle(.plain)
         }
